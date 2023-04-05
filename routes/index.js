@@ -10,30 +10,30 @@ const { validator } = require("../validator");
 router.get('/', (req, res, next) => {
   if(req.session.flag == 1) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : 'Email Already Exists.', flag : 1 });
+    res.render('index', { title: 'Login', message : 'Email Already Exists.', flag : 1 });
   }
   else if(req.session.flag == 2) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : 'Registration Successfully Completed. Please login!', flag : 0 });
+    res.render('index', { title: 'Login', message : 'Registration Successfully Completed. Please login!', flag : 0 });
   }
   else if(req.session.flag == 3) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : 'Confirm Password Does not Match.', flag : 1 });
+    res.render('index', { title: 'Login', message : 'Confirm Password Does not Match.', flag : 1 });
   }
   else if(req.session.flag == 4) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : 'Incorrect Email OR Password.', flag : 1 });
+    res.render('index', { title: 'Login', message : 'Incorrect Email OR Password.', flag : 1 });
   }
   else if(req.session.flag == 5) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : 'Please Login your Account.', flag : 1 });
+    res.render('index', { title: 'Login', message : 'Please Login your Account.', flag : 1 });
   }
   else if(req.session.flag == 6) {
     req.session.destroy();
-    res.render('index', { title: 'Nanosoft', message : "Form Validation Error", flag : 1 });
+    res.render('index', { title: 'Login', message : "Form Validation Error", flag : 1 });
   }
   else {
-    res.render('index', { title: 'Nanosoft'});
+    res.render('index', { title: 'Login'});
   }
 });
 
