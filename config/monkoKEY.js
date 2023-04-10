@@ -1,0 +1,1 @@
+module.exports = "mongodb+srv://Stream:XQKuK2nL3h2MLRhc@cluster0.um6p4qg.mongodb.net/?retryWrites=true&w=majority";
